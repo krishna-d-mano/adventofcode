@@ -17,14 +17,14 @@ for line in lines:
     elf_id += 1
   else:
     calories += int(line)
-    print(calories)
+    # print(calories)
 
-print(elf_map)
+elf_map[elf_id] = calories
 
 largest = max(elf_map.values())
 
-print(largest)
+day1.close()
 
-# seperate each elf's inventory by reading new lines
-# add up each inventory
-# find inventory with most calories
+sorted_values = sorted(elf_map.values())
+
+print(sum(sorted_values[-3:]))
